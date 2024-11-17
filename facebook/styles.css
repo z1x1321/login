@@ -1,0 +1,327 @@
+/*
+  Fonts
+  Variables
+  General
+  Images
+  Container
+  Header
+  Main
+  footer
+  Media Queries
+  Notes
+*/
+/*--------->|| FONTS ||--------<
+---------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*--------->|| VARIABLES ||--------<
+---------------------------------*/
+:root {
+  --blue: #1877f2;
+  --blue-hover: #166fe5;
+  --blue-links: #385898;
+  --green: #42b72a;
+  --green-hover: #36a420;
+  --light-grey: #f0f2f5;
+  --white: #FFFFFF;
+}
+
+/*--------->|| GENERAL STYLES ||--------<
+---------------------------------*/
+body {
+  background: #f0f2f5;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Mulish', sans-serif;
+  color: var(--blue);
+  text-align: left;
+  font-weight: 900;
+  font-size: 4em;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+h2 {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  text-align: left;
+  font-weight: normal;
+}
+
+/*--------->|| IMAGES ||--------<
+---------------------------------*/
+/* #facebook-image-1 {
+  max-width: 100%;
+  height: auto;
+} */
+/*--------->|| CONTAINER ||--------<
+---------------------------------*/
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+/*--------->|| HEADER ||--------<
+---------------------------------*/
+/*--------->|| MAIN ||--------<
+---------------------------------*/
+main {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 75vh;
+}
+
+.information {
+  /* justify-self: start; */
+  /* align-self: center; */
+}
+
+form {}
+
+.login-input {
+  background: white;
+  border-radius: 2%;
+  box-shadow: 0 0px 3px grey;
+  height: 45%;
+  justify-self: end;
+  padding: 2% 5% 10% 5%;
+  width: 70%;
+}
+
+input[type=email] {
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  height: 3em;
+  width: 100%;
+  /*These 2 values are to show a left space when writing*/
+  box-sizing: border-box;
+  padding-left: 10px;
+  color: #c3c6ca;
+  font-size: 1em;
+}
+
+input[type=text] {
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  height: 3em;
+  width: 100%;
+  /*These 2 values are to show a left space when writing*/
+  box-sizing: border-box;
+  padding-left: 10px;
+  color: #c3c6ca;
+  font-size: 1em;
+}
+
+input[type=submit] {
+  color: white;
+  background: var(--blue);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  height: 3em;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background: var(--blue-hover);
+  cursor: pointer;
+}
+
+input[type=email]:focus {
+  outline: 1px solid var(--blue);
+  /*Color of text to show when the user writes*/
+  color: black;
+}
+
+input[type=text]:focus {
+  outline: 1px solid var(--blue);
+  /*Color of text to show when the user writes*/
+  color: black;
+}
+
+.login-input p a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.login-input p a:hover {
+  text-decoration: underline;
+}
+
+#line-divides {
+  border-bottom: 1px solid #dadde1;
+  margin: 20px 16px;
+  text-align: center;
+}
+
+button {
+  background: var(--green);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  margin: 10px auto;
+  padding: 0 22px;
+  font-size: inherit;
+  font-weight: bold;
+  height: 3em;
+}
+
+button:hover {
+  background: var(--green-hover);
+  cursor: pointer;
+}
+
+/*--------->|| FOOTER ||--------<
+---------------------------------*/
+footer {
+  display: flex;
+  background: white;
+  height: 25vh;
+}
+
+.container-footer {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: left;
+}
+
+#line-divides-footer {
+  border-bottom: 1px solid #dadde1;
+  margin: 0 5% 0 0;
+}
+
+footer ul {
+  padding-left: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+footer ul li {
+  display: inline-block;
+  padding-right: 0.8em;
+  font-size: 12px;
+}
+
+footer ul li a {
+  color: #385898;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#copyright {
+  color: #737373;
+  font-size: 12px;
+}
+
+/*--------->|| MEDIA QUERIES ||--------<
+---------------------------------*/
+/*This rule is just for the projects to adapt to screen better*/
+@media (max-width: 1024px) {
+  .information {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .login-input {
+    margin-right: 20px;
+    height: 50%;
+  }
+
+  #crear-cuenta {
+    margin-bottom: 20px;
+  }
+
+  .container-footer {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 828px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-top: 2em;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 4em;
+    letter-spacing: -3px;
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: normal;
+    width: 50%;
+  }
+
+  .login-input {
+    margin-right: 0;
+    width: 40%;
+  }
+
+  footer {
+    margin-top: 20px;
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-input {
+    width: 45%;
+  }
+
+  footer {
+    padding-bottom: 3em;
+  }
+}
+
+@media (max-width: 548px) {
+  .login-input {
+    width: 60%;
+  }
+
+  h2 {
+    width: 65%;
+  }
+
+  footer {
+    padding-bottom: 6em;
+  }
+}
+
+@media (max-width: 481px) {
+  .login-input {}
+}
+
+@media (max-width: 385px) {}
+
+/*--------->NOTES<-----------*/
+/*
+- Para centrar algo horizontalmente en navegadores modernos, usa display:
+ flex; justify-content: center;
+- Sin embargo, en navegadores antiguos como IE8-9, flexbox no está disponible.
+Para poder centrar un elemento horizontalmente con respecto a su contenedor,
+usa margin: 0 auto;
+*/
